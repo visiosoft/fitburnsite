@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
     <link href="css/web.css" rel="stylesheet">
     <title>Fitburn.de</title>
     <style>
@@ -61,7 +63,8 @@
   </div>
   
   <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/8e0hJEt7IX0?si=Q1NOGNLHIavWr2_Z&amp;autoplay=1&amp;vq=hd720&amp;mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div id="player"></div>
+
 </div>  
 
 <div class="image-container">
@@ -121,5 +124,36 @@
         }
       });
     });
+
+        // This function creates an <iframe> (and YouTube player)
+        // after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '315',
+                width: '560',
+                videoId: '8e0hJEt7IX0', // Your video ID here
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 1, // Hide player controls
+                    'rel': 0, // Hide related videos at the end
+                    'showinfo': 0, // Hide video title and uploader before video start
+                    'modestbranding': 0, // Hide YouTube logo
+                    'disablekb': 1,
+                    'iv_load_policy': 3, // Remove annotations
+                    'vq': 'hd720' // Suggest HD quality
+
+
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        // The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
   </script>
 </html>
