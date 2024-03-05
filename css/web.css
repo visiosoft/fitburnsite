@@ -740,6 +740,48 @@ details[open] .faq__summary:after {
     color: white;
     cursor: pointer;
 }
+.Über-container
+{
+    position: absolute;
+    top: 55%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 8%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 35%;
+    color: white;
+    cursor: pointer;
+}
+
+
+.Kontakt-container
+{
+    position: absolute;
+    top: 55%;
+    left: 93%;
+    transform: translate(-50%, -50%);
+    width: 8%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 35%;
+    color: white;
+    cursor: pointer;
+}
+.Invest-container
+{
+    position: absolute;
+    top: 55%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    width: 8%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 35%;
+    color: white;
+    cursor: pointer;
+
+}
 
 .clickable-div-image-android-container {
     position: absolute;
