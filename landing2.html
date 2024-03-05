@@ -30,19 +30,39 @@
             width: 100%;
             height: 100%;
         }
+
+
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 30%; /* Adjust the percentage as needed */
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 
 <body>
     <div class="image-container">
     <img src="assets/img/top.png" usemap="#image-map">
-    <div class="clickable-div-image-container"></div>
+    <div class="Über-container"></div>
+    <div class="Kontakt-container"></div>
+
+    <div class="Invest-container"></div>
+
   </div>
   
-  <div class="image-container-video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/JB1V_3NWrgw?si=sOBd8gpUlD2EvXc5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8e0hJEt7IX0?si=Q1NOGNLHIavWr2_Z&amp;autoplay=1&amp;vq=hd720&amp;mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>  
 
 <div class="image-container">
     <img src="assets/img/layer2.png" usemap="#image-map">
@@ -70,6 +90,23 @@
         var newTabUrl = 'https://fitburn.team/floin';
         window.open(newTabUrl, '_blank');
       };
+
+      if (classesToCheckAndroid.some(className => clickedElement.classList.contains("Über-container"))) {
+        // Replace 'newTabUrl' with the URL you want to open in the new tab
+        var newTabUrl = 'https://www.tobias-rethaber.de';
+        window.open(newTabUrl, '_blank');
+      };
+      if (classesToCheckAndroid.some(className => clickedElement.classList.contains("Kontakt-container"))) {
+        var emailAddress = 'service@vip-group.de';
+    var mailtoLink = 'mailto:' + emailAddress;
+    window.location.href = mailtoLink;
+      };
+      if (classesToCheckAndroid.some(className => clickedElement.classList.contains("Invest-container"))) {
+        // Replace 'newTabUrl' with the URL you want to open in the new tab
+        var newTabUrl = ' https://fitburn.team/floin';
+        window.open(newTabUrl, '_blank');
+      };
+
     });
 
     toggleButtons.forEach((button, index) => {
