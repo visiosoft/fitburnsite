@@ -1,0 +1,1158 @@
+@font-face {
+    font-family: "Benzin";
+    src: url('../assets/font/Benzin-Bold.woff2') format('woff2'),
+        /* Modern Browsers */
+        url('../assets/font/Benzin-Bold.woff2') format('woff');
+    /* Older Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+
+    /* colors */
+    --purple: #7276e1;
+    --orange: hsl(14, 88%, 65%);
+    --blue-dark: hsl(238, 29%, 16%);
+    --grey-light: hsl(237, 12%, 33%);
+    --blue-mid: hsl(240, 6%, 50%);
+
+    /* fonts */
+    --font: 'Kumbh Sans', sans-serif;
+    --base-font-size: 1.2rem;
+
+}
+
+.attribution {
+    color: #fff;
+    font-size: 11px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.attribution a {
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+.d-grid {
+    display: flex;
+    justify-content: center;
+    /* Horizontal centering */
+    align-items: center;
+
+    /* Optional: Makes sure the container takes up the full viewport height */
+}
+
+.faq {
+    background-color: #161616;
+    border-radius: 25px;
+    padding: 50px 25px;
+    color: white;
+    min-height: 1050px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.faq__logo {
+    background: url('https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-mobile.svg') center bottom no-repeat;
+    background-color: transparent;
+    margin: 0 auto;
+    max-width: 300px;
+    display: none;
+    padding: 0;
+    margin-top: -157px;
+}
+
+.faq__logo__image {
+    margin-left: -13px;
+    margin-bottom: 13px;
+}
+
+.faq__heading {
+    color: var(--blue-dark);
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.faq__detail {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+
+    padding: 30px !important;
+}
+
+.faq__summary:hover,
+.faq__summary:active {
+    color: #fb6e19;
+    cursor: pointer;
+}
+
+.faq__detail[open]>.faq__summary {
+    font-weight: 700;
+}
+
+.faq__summary {
+    list-style: none;
+}
+
+.faq__summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq__summary {
+    display: block;
+    padding: 0;
+    position: relative;
+    text-align: right;
+}
+
+.faq__summary:after {
+    display: inline-block;
+    content: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: right;
+    padding-bottom: 20px;
+}
+
+details[open] .faq__summary:after {
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    content: "";
+    background-image: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    transform: scaleY(-1);
+}
+
+.faq__question {
+    left: 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    color: white;
+
+    font-size: 3rem;
+    width: 90%;
+}
+
+.faq__question {
+    display: inline-block;
+
+    text-align: left;
+    width: 90%;
+}
+
+.faq__summary {
+    color: var(--blue-dark);
+    font-size: 1.4rem;
+}
+
+.faq__summary:focus {
+    color: var(--orange);
+    font-weight: bold;
+    outline: none;
+
+}
+
+.faq__text {
+    padding-top: 25px;
+    color: var(--blue-mid);
+    font-size: var(--base-font-size);
+
+    font-size: 2.5rem;
+
+    margin: 10px 0 0 0;
+}
+
+.hidden-lg {
+    display: block;
+}
+
+.visible-lg {
+    display: none;
+}
+
+@media (min-width: 900px) and (max-width: 1780px) {
+    .faq__logo__holder {
+
+        display: none !important;
+
+    }
+}
+
+@media (min-width: 900px) {
+    .faq {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        min-width: 84%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .faq__logo__holder {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        justify-content: center;
+    }
+
+    .faq__holder {
+        margin: 0 50px;
+        padding: 70px 0;
+        max-width: 140%;
+        width: 140%;
+    }
+
+    .faq__logo {
+        display: flex;
+        align-items: center;
+        background-image: url(https://bobmatyas.github.io/fm-faq-accordion/images/illustration-woman-online-desktop.svg), url(https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-desktop.svg);
+        background-position: -75px center, -571px -270px;
+        background-size: 100%, 200%;
+        height: 100%;
+        min-width: 300px;
+        margin: 0;
+        padding: 0;
+        width: 525px;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .faq__heading {
+        text-align: left;
+    }
+
+    .hidden-lg {
+        display: none;
+    }
+
+    .visible-lg {
+        display: block;
+        position: absolute;
+        margin-top: 120px;
+        left: -80px;
+    }
+
+    .faq__text {
+        margin: 0 0 10px 0;
+    }
+
+    .faq__detail {
+        margin: 10px 0 0 0 0;
+        padding: 0;
+    }
+}
+
+.mobile-header {
+    display: none;
+    /* Hide by default on desktop */
+}
+
+/* Styles specific to the desktop header */
+.desktop-header {
+    display: block;
+    /* Show by default on desktop */
+}
+
+.video-container {
+    position: relative;
+    max-width: 100% !important;
+    /* Set maximum width for the container */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding-bottom: 36%;
+    /* Adjust aspect ratio as needed */
+    height: 250px !important;
+    /* Adjust the maximum height as needed */
+    overflow: hidden;
+}
+
+.shouting-bg {
+    border-width: 7.25px;
+    border-style: solid;
+    border-color: #fb6e19 !important;
+    border-radius: 30px;
+    padding: 10px;
+
+    /* Add this line */
+    z-index: 1;
+}
+
+.my-responsive-heading {
+    font-family: "Benzin";
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.image-container {
+    max-width: 100%;
+    /* Allow the container to adjust based on parent width */
+    margin: 0 auto;
+    background-color: #ab0d0d;
+    /* Center the container horizontally */
+    position: relative;
+    /* For positioning the areas correctly */
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    background-color: #fb6e19;
+
+    color: white;
+    padding: var(--bs-modal-padding);
+}
+
+.modal fade {
+    border-radius: 25px;
+    border-color: white;
+    border-width: 20px;
+}
+
+.embed-responsive .video-fill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-white_funktio {
+    color: white;
+    font-size: 2.5rem;
+
+}
+
+#responsive-image {
+    width: 100%;
+    /* Make the image responsive while respecting the areas */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.text-white {
+    color: white !important;
+}
+
+.px-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+}
+
+.social-img {
+    max-width: 100%;
+    /* Ensure images are responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.small-icon {
+    max-width: 100px;
+    /* Set a maximum width */
+    height: auto;
+}
+
+.image-container2 {
+    max-width: 85%;
+
+    /* Allow the container to adjust based on parent width */
+    margin: 0 auto;
+    margin-top: -120px;
+    /* Center the container horizontally */
+    position: relative;
+    /* For positioning the areas correctly */
+}
+
+.text-white a {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.white {
+    color: white;
+    font-size: 4.5rem;
+
+}
+
+.single-line-border-white {
+    background: -webkit-linear-gradient(169deg, #fff 0%, #fff 79%);
+    border-width: 2.25px;
+    border-style: solid;
+    border-color: #fff !important;
+    border-radius: 30px;
+    margin-bottom: 25px;
+
+}
+
+.toggleButton {
+
+    display: flex;
+    align-items: center;
+    font-size: 30px !important;
+    justify-content: space-between;
+    padding: 10px 15px;
+    justify-content: flex-end;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    background-color: #161616;
+    max-width: 100%;
+    /* Adjust as needed */
+    margin: 1px auto;
+
+}
+
+.faq {
+    background-color: #161616;
+    border-radius: 25px;
+    padding: 50px 25px;
+    color: white;
+    min-height: 1050px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.faq__logo {
+    background: url('https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-mobile.svg') center bottom no-repeat;
+    background-color: transparent;
+    margin: 0 auto;
+    max-width: 300px;
+    display: none;
+    padding: 0;
+    margin-top: -157px;
+}
+
+.faq__logo__image {
+    margin-left: -13px;
+    margin-bottom: 13px;
+}
+
+.faq__heading {
+    color: var(--blue-dark);
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.faq__detail {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+
+    padding: 30px !important;
+}
+
+.faq__summary:hover,
+.faq__summary:active {
+    color: #fb6e19;
+    cursor: pointer;
+}
+
+.faq__detail[open]>.faq__summary {
+    font-weight: 700;
+}
+
+.faq__summary {
+    list-style: none;
+}
+
+.faq__summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq__summary {
+    display: block;
+    padding: 0;
+    position: relative;
+    text-align: right;
+}
+
+.faq__summary:after {
+    display: inline-block;
+    content: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: right;
+    padding-bottom: 20px;
+}
+
+details[open] .faq__summary:after {
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    content: "";
+    background-image: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    transform: scaleY(-1);
+}
+
+.faq__question {
+    left: 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    color: white;
+
+    font-size: 2.2rem;
+    width: 90%;
+}
+
+.faq__question {
+    display: inline-block;
+
+    text-align: left;
+    width: 90%;
+}
+
+.faq__summary {
+    color: var(--blue-dark);
+    font-size: 1.4rem;
+}
+
+.faq__summary:focus {
+    color: var(--orange);
+    font-weight: bold;
+    outline: none;
+
+}
+
+.faq__text {
+    padding-top: 25px;
+    color: var(--blue-mid);
+    font-size: var(--base-font-size);
+
+    font-size: 1.5rem;
+
+    margin: 10px 0 0 0;
+}
+
+.hidden-lg {
+    display: block;
+}
+
+.visible-lg {
+    display: none;
+}
+
+.single-line-border-white {
+    background: -webkit-linear-gradient(169deg, #fff 0%, #fff 79%);
+    border-width: 2.25px;
+    border-style: solid;
+    border-color: #fff !important;
+    border-radius: 30px;
+    margin-bottom: 25px;
+
+}
+
+.toggleButton {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    justify-content: flex-end;
+    border: none;
+    font-size: 30px !important;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    background-color: #161616;
+    max-width: 100%;
+    /* Adjust as needed */
+    margin: 1px auto;
+
+}
+
+.collapsible {
+    overflow: hidden;
+    max-height: 0;
+    margin-top: 0;
+    padding-top: 0;
+    justify-content: flex-end !important;
+    transition: max-height 0.3s ease-out;
+}
+
+.collapsible.active {}
+
+.content {
+    justify-content: flex-end !important;
+
+    padding: 5px;
+    font-size: 25px;
+
+}
+
+.collapsible.active {}
+
+.content {
+    justify-content: flex-end !important;
+    font-size: larger;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.noch-text {
+    color: white !important;
+    font-size: 5.5rem !important;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-left: 250px;
+}
+
+.kasten_unten-container,
+.header-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.clickable-div-ladie-container {
+    position: absolute;
+    top: 66%;
+    /* Adjust the top percentage as needed */
+    left: 52%;
+    /* Adjust the left percentage as needed */
+    transform: translate(-50%, -50%);
+    width: 21%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 15%;
+    color: white;
+
+    /* Make it transparent initially */
+    cursor: pointer;
+    /* Change cursor to pointer to indicate it's clickable */
+}
+
+.clickable-div-ladie-android-container {
+    position: absolute;
+    top: 66%;
+    /* Adjust the top percentage as needed */
+    left: 75%;
+    /* Adjust the left percentage as needed */
+    transform: translate(-50%, -50%);
+    width: 23%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 15%;
+    color: white;
+
+    /* Make it transparent initially */
+    cursor: pointer;
+    /* Change cursor to pointer to indicate it's clickable */
+}
+
+.clickable-div-kasten_unten-container {
+    position: absolute;
+    top: 86%;
+    /* Adjust the top percentage as needed */
+    left: 26%;
+    /* Adjust the left percentage as needed */
+    transform: translate(-50%, -50%);
+    width: 22%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 7%;
+    color: white;
+
+    /* Make it transparent initially */
+    cursor: pointer;
+    /* Change cursor to pointer to indicate it's clickable */
+}
+
+.clickable-div-kasten_unten-android-container {
+    position: absolute;
+    top: 86%;
+    /* Adjust the top percentage as needed */
+    left: 51%;
+    /* Adjust the left percentage as needed */
+    transform: translate(-50%, -50%);
+    width: 24%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 7%;
+    color: white;
+
+    /* Make it transparent initially */
+    cursor: pointer;
+    /* Change cursor to pointer to indicate it's clickable */
+}
+
+.clickable-div-header-container-mobile {
+    position: absolute;
+    top: 72%;
+    /* Adjust the top percentage as needed */
+    left: 32%;
+    /* Adjust the left percentage as needed */
+    transform: translate(-50%, -50%);
+    width: 33%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 6%;
+    color: white;
+
+    /* Make it transparent initially */
+    cursor: pointer;
+    /* Change cursor to pointer to indicate it's clickable */
+}
+
+.clickable-div-image-container {
+    position: absolute;
+    top: 78%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    width: 43%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 14%;
+    color: white;
+    cursor: pointer;
+}
+
+.clickable-div-image-android-container {
+    position: absolute;
+    top: 97%;
+    /* Adjust the top percentage as needed */
+    left: 30%;
+    /* Adjust the left percentage as needed */
+    transform: translate(-50%, -50%);
+    width: 21%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 4%;
+    color: white;
+
+    /* Make it transparent initially */
+    cursor: pointer;
+    /* Change cursor to pointer to indicate it's clickable */
+}
+
+.clickable-div-header-android-container-mobile {
+    position: absolute;
+    top: 72%;
+    /* Adjust the top percentage as needed */
+    left: 67%;
+    /* Adjust the left percentage as needed */
+    transform: translate(-50%, -50%);
+    width: 33%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 6%;
+    color: white;
+
+    /* Make it transparent initially */
+    cursor: pointer;
+    /* Change cursor to pointer to indicate it's clickable */
+}
+
+.clickable-div-header-container {
+    position: absolute;
+    top: 85%;
+    /* Adjust the top percentage as needed */
+    left: 35%;
+    /* Adjust the left percentage as needed */
+    transform: translate(-50%, -50%);
+    width: 13%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 6%;
+    color: #ab0d0d;
+
+    /* Make it transparent initially */
+    cursor: pointer;
+    /* Change cursor to pointer to indicate it's clickable */
+}
+
+.clickable-div-header-android-container {
+    position: absolute;
+    top: 92%;
+    /* Adjust the top percentage as needed */
+    left: 35%;
+    /* Adjust the left percentage as needed */
+    transform: translate(-50%, -50%);
+    width: 13%;
+    z-index: 9999;
+    background-color: transparent !important;
+    height: 6%;
+    color: white;
+
+    /* Make it transparent initially */
+    cursor: pointer;
+    /* Change cursor to pointer to indicate it's clickable */
+}
+
+@media (max-width: 768px) {
+    .text-white_funktio {
+        color: white;
+        font-size: 2.0rem !important;
+
+    }
+
+    .faq__summary {
+        margin-top: 25px;
+        border-bottom: 1px solid #fff;
+    }
+
+    .faq {
+
+        padding: 5px;
+        min-height: auto !important;
+    }
+
+    .faq__text {
+        font-size: 0.9rem;
+    }
+
+    .faq__detail {
+        padding: 0% !important;
+    }
+
+    .faq__question {
+
+        font-size: 1.0rem;
+
+    }
+
+    .faq__detail {
+        border-bottom: none;
+
+    }
+
+    .small-icon {
+        max-width: 50px;
+        /* Set a maximum width */
+        height: auto;
+    }
+
+    #responsive-image {
+        width: 100%;
+        /* Make the image responsive while respecting the areas */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .small-icon {
+        max-width: 40px;
+        /* Set a maximum width */
+        height: auto;
+    }
+
+    #responsive-image {
+        width: 100%;
+        /* Make the image responsive while respecting the areas */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .mobile-header {
+        display: block;
+        /* Show on mobile */
+    }
+
+    .desktop-header {
+        display: none;
+        /* Hide on mobile */
+    }
+
+    .my-responsive-heading {
+        font-size: 27px;
+        font-family: "Benzin";
+        font-weight: 800;
+
+        /* Adjust the font size for smaller screens */
+    }
+
+    .my-responsive-footer {
+        font-size: 10px !important;
+
+        /* Adjust the font size for smaller screens */
+    }
+
+    .shouting-bg {
+        border-width: 3.25px;
+        border-style: solid;
+        border-color: #fb6e19 !important;
+        border-radius: 20px;
+
+        padding: 10px;
+
+        /* Add this line */
+        z-index: 1;
+    }
+
+    .toggleButton {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        justify-content: flex-end;
+        border: none;
+        font-size: 15px !important;
+        border-radius: 5px;
+        width: 100%;
+        color: white;
+        background-color: #161616;
+        max-width: 100%;
+        /* Adjust as needed */
+        margin: 1px auto;
+    }
+
+    .content {
+        font-size: 15px !important;
+    }
+
+    .collapsible {
+        overflow: hidden;
+        max-height: 0;
+        margin-top: 0;
+        padding-top: 0;
+        font-size: 15px;
+        justify-content: flex-start !important;
+        transition: max-height 0.3s ease-out;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .faq {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        min-width: 84%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .faq__logo__holder {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        justify-content: center;
+    }
+
+    .faq__holder {
+        margin: 0 50px;
+        padding: 70px 0;
+        max-width: 130%;
+        width: 130%;
+    }
+
+    .faq__logo {
+        display: flex;
+        align-items: center;
+        background-image: url(https://bobmatyas.github.io/fm-faq-accordion/images/illustration-woman-online-desktop.svg), url(https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-desktop.svg);
+        background-position: -75px center, -571px -270px;
+        background-size: 100%, 200%;
+        height: 100%;
+        min-width: 300px;
+        margin: 0;
+        padding: 0;
+        width: 525px;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .faq__heading {
+        text-align: left;
+    }
+
+    .hidden-lg {
+        display: none;
+    }
+
+    .visible-lg {
+        display: block;
+        position: absolute;
+        margin-top: 120px;
+        left: -80px;
+    }
+
+    .faq__text {
+        margin: 0 0 10px 0;
+    }
+
+    .faq__detail {
+        margin: 10px 0 0 0 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .text-white_funktio {
+        color: white;
+        font-size: 1.6rem;
+
+    }
+
+    .small-icon {
+        max-width: 50px;
+        /* Set a maximum width */
+        height: auto;
+    }
+
+    #responsive-image {
+        width: 100%;
+        /* Make the image responsive while respecting the areas */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .mobile-header {
+        display: block;
+        /* Show on mobile */
+    }
+
+    .desktop-header {
+        display: none;
+        /* Hide on mobile */
+    }
+
+    .my-responsive-heading {
+        font-size: 27px;
+        font-family: "Benzin";
+        font-weight: 800;
+
+        /* Adjust the font size for smaller screens */
+    }
+
+    .my-responsive-footer {
+        font-size: 10px !important;
+
+        /* Adjust the font size for smaller screens */
+    }
+
+    .shouting-bg {
+        border-width: 3.25px;
+        border-style: solid;
+        border-color: #fb6e19 !important;
+        border-radius: 20px;
+
+        padding: 10px;
+
+        /* Add this line */
+        z-index: 1;
+    }
+
+    .toggleButton {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        justify-content: flex-end;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 15px !important;
+        color: white;
+        background-color: #161616;
+        max-width: 100%;
+        /* Adjust as needed */
+        margin: 1px auto;
+    }
+
+    .content {
+        font-size: 15px !important;
+    }
+
+    .collapsible {
+        overflow: hidden;
+        max-height: 0;
+        margin-top: 0;
+        padding-top: 0;
+        font-size: 15px;
+        justify-content: flex-start !important;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .shouting-bg {
+        border-width: 15.25px;
+        border-style: solid;
+        border-color: #fb6e19 !important;
+        border-radius: 50px;
+
+        padding: 10px;
+
+        /* Add this line */
+        z-index: 1;
+    }
+
+    .small-icon {
+        max-width: 100px;
+        /* Set a maximum width */
+        height: auto;
+    }
+
+    .text-white_funktio {
+        color: white;
+        font-size: 2.5rem;
+
+    }
+
+    .mobile-header {
+        display: none;
+        /* Hide by default on desktop */
+    }
+
+    /* Styles specific to the desktop header */
+    .desktop-header {
+        display: block;
+        /* Show by default on desktop */
+    }
+
+    .my-responsive-footer {
+        font-size: 20px !important;
+
+        /* Adjust the font size for smaller screens */
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the targeted section */
+.animated-section {
+    animation: fade-in 1s ease-in-out forwards;
+    /* Adjust the animation duration and timing function as needed */
+}
