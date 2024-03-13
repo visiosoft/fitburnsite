@@ -71,7 +71,6 @@
 
 <div class="image-container">
     <img src="assets/img/layer2.png" usemap="#image-map">
-    <div class="clickable-div-image-container"></div>
   </div>
 
   
@@ -96,21 +95,13 @@
         window.open(newTabUrl, '_blank');
       };
 
-      if (classesToCheckAndroid.some(className => clickedElement.classList.contains("Über-container"))) {
-        // Replace 'newTabUrl' with the URL you want to open in the new tab
-        var newTabUrl = 'https://www.tobias-rethaber.de';
-        window.open(newTabUrl, '_blank');
-      };
+ 
       if (classesToCheckAndroid.some(className => clickedElement.classList.contains("Kontakt-container"))) {
         var emailAddress = 'service@vip-group.de';
     var mailtoLink = 'mailto:' + emailAddress;
     window.location.href = mailtoLink;
       };
-      if (classesToCheckAndroid.some(className => clickedElement.classList.contains("Invest-container"))) {
-        // Replace 'newTabUrl' with the URL you want to open in the new tab
-        var newTabUrl = ' https://fitburn.team/floin';
-        window.open(newTabUrl, '_blank');
-      };
+   
 
     });
 
